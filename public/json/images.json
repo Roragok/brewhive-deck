@@ -1,0 +1,14 @@
+{
+  "0": {
+    "path":"/images/men_working.png",
+    "alt":"Men at work sign, but instead man is relaxing while drinkiing."
+  },
+  "1": {
+    "path":"/images/missing_wood.jpg",
+    "alt":"Incomplete deck, missinig part of the top boards."
+  },
+  "2": {
+    "path":"/images/you_shall_not_pass.jpg",
+    "alt":"Chairs blocking an entry way to a door outside."
+  }
+}

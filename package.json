@@ -16,8 +16,10 @@
   "homepage": "https://brewhivedeck.com",
   "dependencies": {
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "jade": "^1.11.0",
     "path": "^0.12.7",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "random": "^3.0.3"
   }
 }
