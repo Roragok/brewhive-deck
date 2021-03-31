@@ -4,3 +4,9 @@
 main {
   margin-bottom: 40px;
 }
+
+@media (max-width: 576px){
+  .banner-wrapper img{
+    max-height: 350px;
+  }
+}

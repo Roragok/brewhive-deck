@@ -72,7 +72,7 @@ app.get('/', (req, res) => {
   }
 
   res.render('index', {
-    title: 'Brewhive Deck',
+    title: 'Deck Status',
     message: phrase,
     progress: number,
     status: status,

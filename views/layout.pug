@@ -8,7 +8,7 @@ html(lang="en")
     link(href="/css/bootstrap.min.css", rel="stylesheet")
     link(href="/css/styles.css", rel="stylesheet")
     script(href="/js/bootstrap.min.js")
-    title= title
+    title Brewhive Deck | #{title}    
   body
     header
       nav.navbar.navbar-expand-lg.navbar-dark.bg-dark 
@@ -21,9 +21,9 @@ html(lang="en")
               a.nav-link(href="/") Home
     main
       div.container
-        h1.text-center.display-4 Brewhive Deck Status
+        h1.text-center.display-5=title
         div.row
-          div.col-sm-6.m-auto
+          div.col-md-6.m-auto
             div.text-center.banner-wrapper
               img(src=image.path, class="img-fluid", alt=image.alt)
               p 
