@@ -1,0 +1,23 @@
+{
+  "name": "brewhivedeck",
+  "version": "1.0.0",
+  "description": "Updates about the brerwhive deck!",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roragok/brewhivedeck.git"
+  },
+  "author": "Roragok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roragok/brewhivedeck/issues"
+  },
+  "homepage": "https://brewhivedeck.com",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jade": "^1.11.0",
+    "path": "^0.12.7",
+    "pug": "^3.0.2"
+  }
+}
