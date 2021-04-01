@@ -1,1 +1,16 @@
 extends layout
+
+block content
+  main
+    div.container
+      h1.text-center.display-5=title
+      div.row
+        div.col-md-6.m-auto
+          div.text-center.banner-wrapper
+            img(src=image.path, class="img-fluid", alt=image.alt)
+            p 
+             em=image.caption
+      div.row
+        div.col-12
+          div.progress
+            div.progress-bar.progress-bar-striped.progress-bar-animated(class='bg-'+ status role="progressbar" style='width:'+ progress + '%' aria-valuenow=progress aria-valuemin="0" aria-valuemax="100" title="Percent of deck work completed")

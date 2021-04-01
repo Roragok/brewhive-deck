@@ -5,30 +5,26 @@ html(lang="en")
     link(rel="shortcut icon", href="/images/fav-icon.png")
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     meta(name="theme-color", content="#000000")
+    title Brewhive Deck | #{title}
     link(href="/css/bootstrap.min.css", rel="stylesheet")
     link(href="/css/styles.css", rel="stylesheet")
-    script(href="/js/bootstrap.min.js")
-    title Brewhive Deck | #{title}    
+    script(src="/javascript/jquery.min.js" type="text/javascript")
+    script(src="/javascript/bootstrap.min.js" type="text/javascript")
+    block head
+     
   body
-    header
-      nav.navbar.navbar-expand-lg.navbar-dark.bg-dark 
-        span.navbar-brand Brewhive Deck
-        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
-          span.navbar-toggler-icon
-        div.collapse.navbar-collapse(id="navbarNav")
-          ul.navbar-nav
-            li.nav-item.active
-              a.nav-link(href="/") Home
-    main
-      div.container
-        h1.text-center.display-5=title
-        div.row
-          div.col-md-6.m-auto
-            div.text-center.banner-wrapper
-              img(src=image.path, class="img-fluid", alt=image.alt)
-              p 
-               em=message
-        div.row
-          div.col-12
-            div.progress
-              div.progress-bar.progress-bar-striped.progress-bar-animated(class='bg-'+ status role="progressbar" style='width:'+ progress + '%' aria-valuenow=progress aria-valuemin="0" aria-valuemax="100" title="Percent of deck work completed")
+    block header
+      header
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark 
+          a.navbar-brand(href="/") Brewhive Deck
+          button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+          div.collapse.navbar-collapse(id="navbarNav")
+            ul.navbar-nav
+              li.nav-item.active
+                a.nav-link(href="/gallery") Gallery
+    block content
+      main
+        div.container
+    block footer
+      footer

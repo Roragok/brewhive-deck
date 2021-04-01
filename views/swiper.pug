@@ -1,0 +1,20 @@
+extends layout
+
+block head
+  script(src="/javascript/swiper-bundle.min.js" type="text/javascript")
+  script(src="/javascript/swiper.js" type="text/javascript")
+  link(href="/css/swiper-bundle.min.css", rel="stylesheet")
+
+  
+block content
+  main
+    div.swiper-container.container
+      div.swiper-wrapper
+        each image in images
+          div.swiper-slide
+            img(src=image.path, class="img-fluid", alt=image.alt)
+            p 
+             em=image.caption
+      div.swiper-pagination
+      div.swiper-button-prev
+      div.swiper-button-next

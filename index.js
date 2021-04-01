@@ -5,8 +5,27 @@ const fs = require('fs')
 
 const app = express()
 const port = 7070
-const phrases = 'public/json/phrases.json'
 const images = 'public/json/images.json'
+
+// load the image data.
+let imageData = fs.readFileSync(images, (err, data) => {
+  if (err) throw err;
+  return data
+});
+
+// entry to grab in JSON
+let entry = 0
+
+// Default image
+let image = {
+    "path":"images/men_working.png",
+    "alt":"Men at work sign, but instead man is relaxing while drinkiing.",
+    "caption": "A wild Frank appears"
+}
+
+// parse json/images
+let imageJSON = JSON.parse(imageData)
+let imagesCount = Object.keys(imageJSON).length - 1
 
 app.set('view engine', 'pug')
 app.use(express.static(path.join(__dirname, 'public')));
@@ -25,60 +44,29 @@ app.get('/', (req, res) => {
     status = "success"
   }
 
-  // length of json object.
-  // overloaded right now
-  let length = 0
-  // entry to grab in JSON
-  // overloaded as well
-  let entry = 0
-
-  // Default phrase/image
-  let phrase = ""
-  let image = {
-      "path":"images/men_working.png",
-      "alt":"Men at work sign, but instead man is relaxing while drinkiing."
-  }
-
-  // Load the phrase data.
-  pharseData = fs.readFileSync(phrases, (err, data) => {
-      if (err) throw err;
-      return data
-    });
-  // load the image data.
-  imageData = fs.readFileSync(images, (err, data) => {
-        if (err) throw err;
-        return data
-      });
-  // parse json/images
-  let pharseJSON = JSON.parse(pharseData)
-  let imageJSON = JSON.parse(imageData)
-  // if we have json data, randomy get an entry for the template
-  if(pharseJSON){
-    // get total count of phrases
-    length = Object.keys(pharseJSON).length
-    // get a random object in the length of json
-    entry = random.int(0,(length-1))
-    // pass the phrase to the template
-    phrase = pharseJSON[entry]
-  }
   // if we have json data, randomly load an entry for the template
   if(imageJSON){
-    // get total count of images
-    length = Object.keys(imageJSON).length
     // get a random object in the length of json
-    entry = random.int(0,(length-1))
+    entry = random.int(0, imagesCount)
     // pass the image to the template
     image = imageJSON[entry]
   }
 
   res.render('index', {
     title: 'Deck Status',
-    message: phrase,
     progress: number,
     status: status,
     image: image
   })
 })
+
+app.get('/gallery', (req, res) => {
+  res.render('swiper', {
+    title: 'Gallery',
+    images: imageJSON
+  })
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

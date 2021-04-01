@@ -1,12 +1,23 @@
-.banner-wrapper img{
-  max-height: 500px;
-}
 main {
   margin-bottom: 40px;
 }
 
+main .swiper-container-horizontal>.swiper-pagination-bullets{
+  bottom:0;
+}
+
+.banner-wrapper img,
+.swiper-slide img{
+  max-height: 500px;
+  height: 100%;
+}
+.swiper-wrapper{
+  text-align: center;
+}
+
 @media (max-width: 576px){
-  .banner-wrapper img{
-    max-height: 350px;
+  .banner-wrapper img,
+  .swiper-slide img{
+    max-height: 325px;
   }
 }

@@ -1,14 +1,22 @@
 {
   "0": {
     "path":"/images/men_working.png",
-    "alt":"Men at work sign, but instead man is relaxing while drinkiing."
+    "alt":"Men at work sign, but instead man is relaxing while drinkiing.",
+    "caption": "A wild Frank appears"
   },
   "1": {
     "path":"/images/missing_wood.jpg",
-    "alt":"Incomplete deck, missinig part of the top boards."
+    "alt":"Incomplete deck, missinig part of the top boards.",
+    "caption": "Under construction since 2020"
   },
   "2": {
     "path":"/images/you_shall_not_pass.jpg",
-    "alt":"Chairs blocking an entry way to a door outside."
+    "alt":"Chairs blocking an entry way to a door outside.",
+    "caption": "You shall not pass"
+  },
+  "3": {
+    "path":"/images/stairs.jpg",
+    "alt":"Stairs outside that ascend to a deck.",
+    "caption": "We haz stairs"
   }
 }
