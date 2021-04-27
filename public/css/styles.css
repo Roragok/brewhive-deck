@@ -6,6 +6,13 @@ main .swiper-container-horizontal>.swiper-pagination-bullets{
   bottom:0;
 }
 
+h1{
+  color: #212529;
+}
+a:hover{
+  text-decoration: none;
+}
+
 .banner-wrapper img,
 .swiper-slide img{
   max-height: 500px;

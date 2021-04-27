@@ -18,5 +18,15 @@
     "path":"/images/stairs.jpg",
     "alt":"Stairs outside that ascend to a deck.",
     "caption": "We haz stairs"
+  },
+  "4": {
+    "path":"/images/extra_parts.jpg",
+    "alt":"Wood leaning against railing of a deck.",
+    "caption": "Not sure where these go."
+  },
+  "5": {
+    "path":"/images/no_access.jpg",
+    "alt":"Three orange construction cones blocking stairs to the deck.",
+    "caption": "Two steps forward, three steps back."
   }
 }

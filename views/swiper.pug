@@ -8,13 +8,15 @@ block head
   
 block content
   main
-    div.swiper-container.container
-      div.swiper-wrapper
-        each image in images
-          div.swiper-slide
-            img(src=image.path, class="img-fluid", alt=image.alt)
-            p 
-             em=image.caption
-      div.swiper-pagination
-      div.swiper-button-prev
-      div.swiper-button-next
+    div.container
+      h1.text-center.display-5=title
+      div.swiper-container
+        div.swiper-wrapper
+          each image in images
+            div.swiper-slide
+              img(src=image.path, class="img-fluid", alt=image.alt)
+              p 
+               em=image.caption
+        div.swiper-pagination
+        div.swiper-button-prev
+        div.swiper-button-next
